@@ -1,0 +1,454 @@
+/* *********************************
+*********TODOS LIST**************
+********************************* */
+
+/* make large breakpoint with delay timer
+turn off wowjs on mobile */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Acme', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 0 0 16px 0;
+  z-index: 1;
+}
+
+a {
+  white-space: nowrap;
+}
+
+.content {
+  padding: 16px 0;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky+.content {
+  padding-top: 80px;
+}
+
+.right h1 {
+  font-family: 'Alex Brush', cursive;
+  color: hsl(266, 78%, 64%);
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+nav {
+  font-size: 1.5em;
+  width: 100vw;
+}
+
+.navbar {
+  display: flex;
+  background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
+  height: 110px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  transition: 500ms ease-in-out;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar a {
+  text-decoration: none;
+  color: gold;
+}
+
+.navbar a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 4px;
+  background: gold;
+  transition: width .4s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+a.active::after {
+  width: 100%;
+}
+
+.navbar li {
+  padding: 0 20px;
+}
+
+.logo {
+  margin-top: 7px;
+}
+
+main {
+  display: flex;
+  margin: 100px 0;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+.paypal {
+  box-shadow: none;
+}
+
+.btn {
+  transition: all .4s;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 0 3px #fff, 0 0 0 6px hsl(266, 78%, 64%), -7px 7px 7px rgba(0, 0, 0, 0.75);
+  background: hsl(266, 78%, 64%);
+  color: gold;
+}
+
+.cta-image {
+  width: 50%;
+}
+
+.right {
+  text-align: center;
+  width: 50%;
+}
+
+.right a {
+  text-decoration: none;
+  background: #00c4cc;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 50px;
+  border-radius: 8px;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 750px) {
+  main {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .right {
+    width: 100%;
+  }
+  .right h1 {
+    font-size: 4em;
+  }
+  .cta-image {
+    margin-top: 50px;
+    width: 70%;
+  }
+}
+
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.cta-desc {
+  background: #00c4cc;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+.cta-desc h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: gold;
+}
+
+.cta-desc p {
+  font-size: 1.25em;
+  letter-spacing: .125em;
+}
+
+.cta-desc p span {
+  color: hsl(266, 78%, 64%);
+  letter-spacing: .01em;
+}
+
+.cta-desc a {
+  text-decoration: none;
+  color: gold;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  transition: all .8s;
+}
+
+.cta-desc a:hover {
+  color: black;
+}
+
+section {
+  padding: 40px;
+  text-align: center;
+  font-family: 'Alex Brush', cursive;
+  color: hsl(266, 78%, 64%);
+  font-size: 1.5em;
+}
+
+section h2 {
+  margin: 30px;
+}
+
+section p {
+  padding: 30px;
+  font-family: 'Acme', sans-serif;
+}
+
+section a {
+  text-decoration: none;
+  font-family: 'Acme', sans-serif;
+  color: #fff;
+  letter-spacing: .3em;
+  padding: 8px 50px;
+  background: #00c4cc;
+  border-radius: 10px;
+}
+
+.figs {
+  font-family: 'Acme', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 30px 0 60px 0;
+}
+
+figure img {
+  box-shadow: 3px 3px 10px rgb(61, 152, 175);
+}
+
+.promo-sm {
+  max-width: 20vw;
+  border: 3px solid turquoise;
+}
+
+.promo-lg {
+  max-width: 40vw;
+  border: 3px solid turquoise;
+}
+
+figure h3 {
+  margin: 15px 0 5px 0;
+}
+
+figure p {
+  padding-bottom: 20px;
+}
+
+figure a {
+  text-decoration: none;
+  color: #fff;
+  background: #00c4cc;
+  padding: 7px 20px;
+}
+
+figcaption {
+  font-size: .75em;
+}
+
+@media screen and (max-width: 750px) {
+  .cta-desc h2 {
+    font-size: 2.5em;
+  }
+  .cta-desc p {
+    font-size: 1.5em;
+    line-height: 1.75em;
+  }
+  section h2 {
+    font-size: 2.5em;
+  }
+  .figs {
+    flex-direction: column;
+  }
+  figure {
+    margin: 30px auto;
+  }
+  figcaption {
+    font-size: 1em;
+  }
+  .promo-lg,
+  .promo-sm {
+    max-width: 60vw;
+  }
+}
+
+.shop-cta {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  margin: 100px auto;
+  width: 80%;
+  padding: 80px;
+  background-image: linear-gradient(rgba(2, 67, 71, 0.5), rgba(9, 22, 92, 0.5)), url(../img/shopping-annex.jpeg);
+  background-position: center;
+}
+
+@media screen and (max-width: 750px) {
+  .shop-cta {
+    width: 50%;
+    background-size: cover;
+  }
+}
+
+footer {
+  flex-shrink: 0;
+  background: linear-gradient(to right, hsl(266, 78%, 64%), #00c4cc);
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.5em;
+}
+
+footer i {
+  color: #fff;
+  font-size: 1.3em;
+  padding: 0 10px;
+  display: flex;
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    font-size: 1.2em;
+  }
+}
+
+/* ************************
+ *****  SHOP PAGE  ******
+************************ */
+
+.shop-content {
+  text-align: center;
+}
+
+.shop-heading {
+  margin: 15px auto 30px auto;
+  font-size: 3em;
+  color: #e4c47a;
+}
+
+.cat-head {
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  background: #e4c47a;
+  margin: 30px auto;
+  align-items: center;
+  justify-content: center;
+  color: hsl(266, 78%, 64%);
+  font-size: 1.2em;
+}
+
+.wrapper ul li {
+  display: inline-block;
+  margin: 50px 10px;
+  padding: 15px 30px;
+  background-color: hsl(266, 78%, 64%);
+  border-radius: 15px 15px 0 0;
+  text-transform: uppercase;
+}
+
+.wrapper ul li a {
+  color: gold;
+  text-decoration: none;
+}
+
+.fig-row {
+  margin: 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shop-fig {
+  flex-basis: auto;
+  flex-grow: 1;
+  border: 2px solid grey;
+  margin: 5px;
+  padding: 10px;
+}
+
+.shop-fig figcaption {
+  color: hsl(266, 78%, 64%);
+  text-transform: uppercase;
+  font-size: 1.35em;
+}
+
+.shop-fig p {
+  font-size: 2em;
+  color: red;
+}
+
+/* ******************************** */
+
+/* **********mobile nav************ */
+
+/* ******************************** */
+
+/* Style the navigation menu */
+
+.topnav {
+  overflow: hidden;
+  background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+
+.topnav a {
+  color: gold;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5em;
+  display: block;
+}
+
+.smLogo {
+  height: 40px;
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  font-size: 1.5em;
+}
+
+.topnav a:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 750px) {
+  .topnav {
+    display: none;
+  }
+}
