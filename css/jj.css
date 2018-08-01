@@ -2,8 +2,6 @@
 *********TODOS LIST**************
 ********************************* */
 
-/* make divider style arrow on divs with things below them */
-
 * {
   margin: 0;
   padding: 0;
@@ -18,11 +16,45 @@ body {
   font-family: 'Acme', sans-serif;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+#up-arrow {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  z-index: 99;
+  padding: 15px;
+  font-size: 2em;
+  color: gold;
+}
+
+#up-arrow:hover {
+  color: #000;
 }
 
 header {
   padding: 0 0 16px 0;
   z-index: 1;
+}
+
+.bottom {
+  position: relative;
+}
+
+.bottom:before {
+  content: '';
+  position: absolute;
+  border-width: 30px;
+  border-style: solid;
+  border-color: transparent;
+  left: 50%;
+  bottom: 0;
+  border-top-color: #00c4cc;
+  -webkit-transform: translate(-50%, 100%);
+  -ms-transform: translate(-50%, 100%);
+  transform: translate(-50%, 100%);
 }
 
 a {
@@ -74,6 +106,7 @@ nav {
 .navbar a {
   text-decoration: none;
   color: gold;
+  padding: 0 20px;
 }
 
 .navbar a::after {
@@ -91,10 +124,6 @@ nav {
 
 a.active::after {
   width: 100%;
-}
-
-.navbar li {
-  padding: 0 20px;
 }
 
 .logo {
@@ -361,18 +390,36 @@ footer i {
   font-size: 1.2em;
 }
 
-.wrapper ul li {
-  display: inline-block;
-  margin: 50px 10px;
-  padding: 15px 30px;
+.shop-cats {
   background-color: hsl(266, 78%, 64%);
-  border-radius: 15px 15px 0 0;
-  text-transform: uppercase;
+  width: 50%;
+  margin: 45px auto;
+  border-radius: 7px;
 }
 
-.wrapper ul li a {
+@media screen and (max-width: 1200px) {
+  .shop-cats {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .shop-cats {
+    font-size: .8em;
+  }
+}
+
+.shop-cats a {
+  display: inline-block;
+  margin: 20px 10px;
+  text-transform: uppercase;
   color: gold;
   text-decoration: none;
+  font-size: 1.2em;
+}
+
+.shop-cats a:hover {
+  color: #000;
 }
 
 .fig-row {

@@ -14,28 +14,43 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="icon" type="image/png" href="./img/favicon.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
 </head>
 
-<body>
+<body id="top">
   <header class="header wow flipInX" id="myHeader">
-    <nav>
-      <ul class="navbar">
-        <li>
-          <a href="index.html" class="active">Home</a>
-        </li>
-        <li>
-          <a href="shop.html">Shop</a>
-        </li>
-        <li>
-          <img src="./img/JUDYS JEWELS LOGO.svg" alt="Judys Jewels Logo" class="logo">
-        </li>
-        <li>
-          <a href="about_us.html">About Us</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="shop.html">Shop</a>
+      <img src="./img/JUDYS JEWELS LOGO.svg" alt="Judys Jewels Logo" class="logo">
+      <a href="about_us.html">About Us</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <!-- Top Navigation Mobile Menu -->
     <div class="topnav">
@@ -53,19 +68,22 @@
       </a>
     </div>
   </header>
+  <a href="#top" id="up-arrow">
+    <i class="fas fa-arrow-circle-up"></i>
+  </a>
   <main class="content">
     <img src="./img/bead-bracelet.png" alt="bead bracelet" class="cta-image wow bounceInLeft" data-wow-delay=".5s">
     <div class="right">
       <h1 class="wow bounceInRight" data-wow-delay="1s">Handcrafted Jewelry</h1>
       <div class="wow flipInY" data-wow-delay="2s">
-        <a href="gallery.html" class="btn">Shop Now!</a>
+        <a href="shop.html" class="btn" id="btn-test">Enter Shop</a>
       </div>
     </div>
 
   </main>
-  <div class="cta-desc">
-    <h2 class="wow bounceInUp" data-wow-delay="2.3s">Every Piece is Hand-Made in the USA</h2>
-    <p class="wow fadeIn" data-wow-duration="3s" data-wow-delay="2.8s">At Judy's Jewels, all of the pieces are individually hand-crafted with love and care. Join our mailer to keep up-to-date
+  <div class="cta-desc bottom">
+    <h2>Every Piece is Hand-Made in the USA</h2>
+    <p>At Judy's Jewels, all of the pieces are individually hand-crafted with love and care. Join our mailer to keep up-to-date
       on
       <span>NEW PRODUCTS</span> and
       <span>SALES</span> by visiting our

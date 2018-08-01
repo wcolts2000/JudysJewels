@@ -14,28 +14,43 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="icon" type="image/png" href="./img/favicon.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
 </head>
 
-<body class="shop_body">
+<body class="shop_body" id="top">
   <header class="header wow flipInX" id="myHeader">
-    <nav>
-      <ul class="navbar">
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="shop.html" class="active">Shop</a>
-        </li>
-        <li>
-          <img src="./img/JUDYS JEWELS LOGO.svg" alt="Judys Jewels Logo" class="logo">
-        </li>
-        <li>
-          <a href="about_us.html">About Us</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <img src="./img/JUDYS JEWELS LOGO.svg" alt="Judys Jewels Logo" class="logo">
+      <a href="about_us.html">About Us</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <!-- Top Navigation Mobile Menu -->
     <div class="topnav">
@@ -53,6 +68,9 @@
       </a>
     </div>
   </header>
+  <a href="#top" id="up-arrow">
+    <i class="fas fa-arrow-circle-up"></i>
+  </a>
   <div class="shop-content content">
     <div class="shop-head">
       <h1 class="shop-heading">Welcome to Our Shop</h1>
@@ -63,26 +81,14 @@
     </div>
     <div class="wrapper">
       <hr class="style-two">
-      <ul class="shop-cats">
-        <li>
-          <a href="#">Necklaces</a>
-        </li>
-        <li>
-          <a href="#">Pendants</a>
-        </li>
-        <li>
-          <a href="#">Bracelets</a>
-        </li>
-        <li>
-          <a href="#">Earrings</a>
-        </li>
-        <li>
-          <a href="#">Rings</a>
-        </li>
-        <li>
-          <a href="#">Sets</a>
-        </li>
-      </ul>
+      <div class="shop-cats">
+        <a href="#">Necklaces</a>
+        <a href="#">Pendants</a>
+        <a href="#">Bracelets</a>
+        <a href="#">Earrings</a>
+        <a href="#">Rings</a>
+        <a href="#">Sets</a>
+      </div>
       <div class="fig-row">
         <figure class="shop-fig">
           <img src="./img/necklace.png" alt="a bead necklace">
