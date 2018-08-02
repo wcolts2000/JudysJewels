@@ -505,7 +505,7 @@ footer i {
 ******************* */
 
 .err-404 {
-  font-size: 20em;
+  font-size: 15em;
   margin: auto;
 }
 
@@ -513,24 +513,43 @@ footer i {
   display: flex;
   width: 100vw;
   color: #00c4cc;
-  margin: -14px 90px;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .text {
-  font-size: 2em;
+  font-size: 1.5em;
+  padding: 20px;
 }
 
 .text p {
-  margin-bottom: 15px;
-}
-
-.text p:nth-child(3) {
-  margin-bottom: 50px;
+  line-height: 2em;
+  margin-bottom: 30px;
 }
 
 .text a {
   text-decoration: none;
   color: #fff;
   background: #00c4cc;
-  padding: 10px 18px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.text a:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #00c4cc;
+  color: gold;
+}
+
+@media screen and (max-width: 750px) {
+  .err-wrapper {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .err-404 {
+    font-size: 10em;
+  }
+  .text {
+    text-align: center;
+  }
 }
