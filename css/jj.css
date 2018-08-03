@@ -22,7 +22,7 @@ body {
 #up-arrow {
   display: none;
   position: fixed;
-  bottom: 0;
+  bottom: 45px;
   right: 10px;
   z-index: 99;
   padding: 15px;
@@ -552,4 +552,136 @@ footer i {
   .text {
     text-align: center;
   }
+}
+
+.product-wrapper {
+  display: flex;
+  margin: 30px;
+  width: 100vw;
+  flex-flow: row;
+}
+
+@media screen and (max-width: 750px) {
+  .product-wrapper {
+    flex-flow: column;
+    align-items: center;
+  }
+  .product-desc {
+    margin: 20px;
+  }
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-card h1 {
+  margin-bottom: 20px;
+  color: hsl(266, 78%, 64%);
+}
+
+.product-thumbs {
+  display: flex;
+  margin-top: 20px;
+}
+
+.product-img {
+  width: 300px;
+  height: 300px;
+  background: #e4c47a;
+  border: 2px solid hsl(266, 78%, 64%);
+  background-image: url(/img/lace-necklace-and-earrings.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.product-thumb1 {
+  margin-right: 10px;
+  width: 49px;
+  height: 48px;
+  background: #e4c47a;
+  border: 2px solid hsl(266, 78%, 64%);
+  background-image: url(/img/lace-necklace-and-earrings.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.product-thumb2 {
+  margin-right: 10px;
+  width: 49px;
+  height: 48px;
+  background: #e4c47a;
+  border: 2px solid hsl(266, 78%, 64%);
+  background-image: url(/img/lace-necklace-and-earrings.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.product-thumb3 {
+  margin-right: 10px;
+  width: 49px;
+  height: 48px;
+  background: #e4c47a;
+  border: 2px solid hsl(266, 78%, 64%);
+  background-image: url(/img/lace-necklace-and-earrings.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.product-thumb4 {
+  margin-right: 10px;
+  width: 49px;
+  height: 48px;
+  background: #e4c47a;
+  border: 2px solid hsl(266, 78%, 64%);
+  background-image: url(/img/lace-necklace-and-earrings.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.product-thumb5 {
+  margin-right: 10px;
+  width: 49px;
+  height: 48px;
+  background: #e4c47a;
+  border: 2px solid hsl(266, 78%, 64%);
+  background-image: url(/img/lace-necklace-and-earrings.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.product-desc h2 {
+  color: hsl(266, 78%, 64%);
+  margin: 0 0 25px 0;
+}
+
+.product-desc p {
+  margin-bottom: 25px;
+  font-size: 1.2em;
+}
+
+.suggested-items {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.suggested-items-sect h2 {
+  font-family: 'Acme', sans-serif;
+  font-size: .75em;
+}
+
+.suggested-items img {
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+}
+
+.suggested-items a {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
 }
