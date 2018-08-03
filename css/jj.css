@@ -650,6 +650,10 @@ footer i {
   background-position: center;
 }
 
+.product-desc {
+  padding: 0 30px 30px 30px;
+}
+
 .product-desc h2 {
   color: hsl(266, 78%, 64%);
   margin: 0 0 25px 0;
