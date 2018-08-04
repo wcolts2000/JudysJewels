@@ -1,5 +1,6 @@
 window.onscroll = function () {
-  stickyHeader()
+  stickyHeader();
+  scrollFunction();
 };
 
 let header = document.getElementById("myHeader");
@@ -14,33 +15,8 @@ function stickyHeader() {
   }
 }
 
-function hamburgerMenuToggle() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
-function elmYPosition(eID) {
-  var elm = document.getElementById(eID);
-  var y = elm.offsetTop;
-  var node = elm;
-  while (node.offsetParent && node.offsetParent != document.body) {
-    node = node.offsetParent;
-    y += node.offsetTop;
-  }
-  return y;
-}
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction()
-};
-
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     document.getElementById("up-arrow").style.display = "block";
   } else {
     document.getElementById("up-arrow").style.display = "none";
@@ -52,3 +28,33 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+function hamburgerMenuToggle() {
+  let x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function elmYPosition(eID) {
+  let elm = document.getElementById(eID);
+  let y = elm.offsetTop;
+  let node = elm;
+  while (node.offsetParent && node.offsetParent != document.body) {
+    node = node.offsetParent;
+    y += node.offsetTop;
+  }
+  return y;
+}
+
+$('.thumbnail').on('click', function () {
+  let clicked = $(this);
+  let newSelection = clicked.data('big');
+  let $img = $('.primary').css("background-image", "url(" + newSelection + ")");
+  clicked.parent().find('.thumbnail').removeClass('selected');
+  clicked.addClass('selected');
+  $('.primary').empty().append($img.hide().fadeIn('slow'));
+});
