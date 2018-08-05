@@ -84,7 +84,7 @@ a {
 
 nav {
   font-size: 1.5em;
-  width: 100vw;
+  width: 100%;
 }
 
 .navbar {
@@ -369,7 +369,7 @@ footer i {
 }
 
 /* ************************
- *****  SHOP PAGE  ******
+ *****  SHOP PAGES  ******
 ************************ */
 
 .shop-content {
@@ -384,7 +384,7 @@ footer i {
 
 .cat-head {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 80px;
   background: #e4c47a;
   margin: 30px auto;
@@ -424,6 +424,186 @@ footer i {
 
 .shop-cats a:hover {
   color: #000;
+}
+
+.shop-cats .active {
+  background: #fff;
+  color: hsl(266, 78%, 64%);
+  font-weight: bolder;
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+.showcase-body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,f4f4f4+51,d8d8d8+100 */
+  background: white;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, white 0%, white 50%, #f4f4f4 51%, #d8d8d8 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(50%, white), color-stop(51%, #f4f4f4), color-stop(100%, #d8d8d8));
+}
+
+.p_slider {
+  width: 200px;
+  height: 339px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+.p_slider .left,
+.p_slider .right {
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+}
+
+.p_slider__item {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  transition-duration: 1.5s;
+  transition-property: transform, left, opacity, -webkit-filter;
+}
+
+.p_slider__item img {
+  width: 200px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  position: relative;
+  -webkit-animation: scale_bounce 1.2s .4s forwards;
+  animation: scale_bounce 1.2s .4s forwards;
+  -webkit-box-reflect: below 4px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.2)));
+}
+
+.p_slider__item:nth-of-type(1) {
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+  left: -200px;
+  -webkit-filter: blur(2px);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.p_slider__item:nth-of-type(2) {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  left: 0px;
+  z-index: 2;
+}
+
+.p_slider__item:nth-of-type(3) {
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+  left: 200px;
+  z-index: 1;
+  -webkit-filter: blur(2px);
+  opacity: 0.8;
+}
+
+.controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.controls .left {
+  float: left;
+  cursor: pointer;
+  position: relative;
+  left: 40px;
+}
+
+.controls .left img {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: all .4s;
+  opacity: 0.2;
+}
+
+.controls .left img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.controls .right {
+  float: right;
+  cursor: pointer;
+  position: relative;
+  right: 40px;
+}
+
+.controls .right img {
+  transition: all .4s;
+  opacity: 0.2;
+}
+
+.controls .right img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+@-webkit-keyframes scale_bounce {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+  60% {
+    -webkit-transform: scale(1.012);
+    transform: scale(1.012);
+  }
+  80% {
+    -webkit-transform: scale(0.995);
+    transform: scale(0.995);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale_bounce {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+  60% {
+    -webkit-transform: scale(1.012);
+    transform: scale(1.012);
+  }
+  80% {
+    -webkit-transform: scale(0.995);
+    transform: scale(0.995);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 .fig-row {
