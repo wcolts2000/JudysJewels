@@ -75,7 +75,7 @@ a {
   padding-top: 80px;
 }
 
-.right h1 {
+.rightHome h1 {
   font-family: 'Alex Brush', cursive;
   color: hsl(266, 78%, 64%);
   font-size: 3em;
@@ -159,12 +159,12 @@ main {
   width: 50%;
 }
 
-.right {
+.rightHome {
   text-align: center;
   width: 50%;
 }
 
-.right a {
+.rightHome a {
   text-decoration: none;
   background: #00c4cc;
   color: #fff;
@@ -180,10 +180,10 @@ main {
     flex-direction: column;
     flex-flow: column-reverse;
   }
-  .right {
+  .rightHome {
     width: 100%;
   }
-  .right h1 {
+  .rightHome h1 {
     font-size: 4em;
   }
   .cta-image {
@@ -435,15 +435,21 @@ footer i {
 }
 
 .showcase-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,f4f4f4+51,d8d8d8+100 */
-  background: white;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, white 0%, white 50%, #f4f4f4 51%, #d8d8d8 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(50%, white), color-stop(51%, #f4f4f4), color-stop(100%, #d8d8d8));
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 200px 0 200px 0;
+  border-radius: 25px;
+  width: 80%;
+}
+
+@media screen and (max-width: 520px) {
+  .showcase-body {
+    overflow-x: hidden;
+  }
+  .shop-heading {
+    font-size: 2em;
+  }
 }
 
 .p_slider {
@@ -453,7 +459,6 @@ footer i {
   left: 0;
   right: 0;
   bottom: 0;
-  top: 0;
   margin: auto;
 }
 
