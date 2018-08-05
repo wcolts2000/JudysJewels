@@ -432,6 +432,7 @@ footer i {
   font-weight: bolder;
   line-height: 30px;
   padding: 0 10px;
+  border-radius: 4px;
 }
 
 .showcase-body {
