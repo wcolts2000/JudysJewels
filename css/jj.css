@@ -345,6 +345,20 @@ figcaption {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .shop-cta {
+    padding: 80px 50px;
+    margin: 100px auto 60px auto;
+  }
+  .shop-cta p {
+    padding: 30px 0;
+  }
+  .shop-cta a.btn {
+    font-size: .75em;
+    padding: 8px 22px;
+  }
+}
+
 footer {
   flex-shrink: 0;
   background: linear-gradient(to right, hsl(266, 78%, 64%), #00c4cc);
