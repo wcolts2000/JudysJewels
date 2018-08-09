@@ -883,46 +883,153 @@ h1.about-us {
   font-size: 1.25em;
 }
 
+@media screen and (max-width: 750px) {
+  .contact-heading {
+    font-size: 1.5em;
+  }
+  .contact-text {
+    font-size: .9em;
+  }
+}
+
 .form-group {
+  font-family: 'Acme', sans-serif;
+  width: 50%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px auto;
+  background: #00c4cc;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 0 4px white, 0 0 0 8px #00c4cc, 0 0 15px 8px rgba(7, 101, 138, 0.5);
+}
+
+@media screen and (max-width: 500px) {
+  .form-group {
+    width: 80%;
+    margin: 10px auto;
+    padding: 30px 10px;
+  }
+}
+
+.form-group input {
+  border: none;
+  box-shadow: none;
+}
+
+.form-group input:focus {
+  background: salmon;
+  color: #fff;
 }
 
 legend {
-  font-family: 'Acme', sans-serif;
   display: block;
   background-color: #e4c47a;
-  height: 50px;
-  padding-top: 13px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 0;
-  margin: 0 20px;
-  font-size: 1.2em;
+  height: 20px;
+  padding: 5px 10px 12px 10px;
+  font-size: .85em;
   border-radius: 7px;
+  cursor: default;
 }
 
 #mybtn {
+  display: block;
   padding: 7px 15px;
   background: hsl(266, 78%, 64%);
   color: #e4c47a;
   border-radius: 7px;
   font-family: 'Acme', sans-serif;
-  font-size: 1.2em;
+  font-size: .75em;
+  box-shadow: 0 0 0 3px #00c4cc, 0 0 0 6px hsl(266, 78%, 64%), 0 0 12px 5px rgba(0, 0, 0, 0.3);
+  transition: all .5s ease-in-out;
+  cursor: pointer;
 }
 
-.input-group {
-  display: flex;
-  align-items: center;
+#mybtn:hover {
+  background: #fff;
+  box-shadow: 0 0 0 3px #00c4cc, 0 0 0 5px white, 0 0 12px 5px rgba(0, 0, 0, 0.5);
+  color: hsl(266, 78%, 64%);
+  transform: scale(1.1);
 }
 
 #n,
 #e {
-  margin: 60px;
-  font-size: 1.2em;
+  margin: 30px;
+  font-size: .75em;
   border-radius: 8px;
   padding: 7px 15px;
+  box-shadow: 0 0 0 3px #00c4cc, 0 0 0 5px white;
+}
+
+@media screen and (max-width: 400px) {
+  .contact-heading {
+    font-size: 1.2em;
+  }
+  .contact-text {
+    line-height: 1.5em;
+  }
+  .form-group {
+    width: 90%;
+    box-shadow: none;
+  }
+  legend {
+    display: block;
+    font-size: .7em;
+    padding: 5px 12px;
+  }
+  #n,
+  #e {
+    font-size: .5em;
+    box-shadow: none;
+  }
+}
+
+.about-us-content {
+  background-image: linear-gradient(rgba(73, 209, 209, 0.74), rgba(189, 20, 152, 0.6)), url(/img/mountains-sceen.png);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px 20px 60px 20px;
+  border-radius: 20px;
+  color: #2c1f00;
+  border: 5px solid #e4c47a;
+  text-align: center;
+  box-shadow: 0px 0px 30px -5px rgb(4, 35, 117);
+  font-size: 1.2em;
+  padding-bottom: 60px;
+}
+
+.about-us-text {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  line-height: 1.5em;
+}
+
+@media screen and (max-width: 500px) {
+  .about-us-content {
+    font-size: 1em;
+  }
+}
+
+.shop-btn {
+  padding: 3px 15px;
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  border-radius: 6px;
+  background: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  color: rgba(139, 13, 118, 0.89);
+  box-shadow: 0 0 0 3px rgba(139, 13, 118, 0.89), 0 0 0 6px white;
+  transition: all .4s ease-in-out;
+}
+
+.shop-btn:hover {
+  background: rgba(139, 13, 118, 0.89);
+  box-shadow: 0 0 0 3px white, 0 0 0 6px rgba(139, 13, 118, 0.89), 0 0 12px 6px rgba(0, 0, 0, 0.75);
+  color: white;
+  transform: scale(1.2);
 }
