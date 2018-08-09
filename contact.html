@@ -41,6 +41,33 @@
       });
     });
   </script>
+  <script>
+    function _(id) {
+      return document.getElementById(id);
+    }
+
+    function submitForm() {
+      _("mybtn").disabled = true;
+      _("status").innerHTML = 'please wait ...';
+      var formdata = new FormData();
+      formdata.append("n", _("n").value);
+      formdata.append("e", _("e").value);
+      var ajax = new XMLHttpRequest();
+      ajax.open("POST", "example_parser.php");
+      ajax.onreadystatechange = function () {
+        if (ajax.readyState == 4 && ajax.status == 200) {
+          if (ajax.responseText == "success") {
+            _("my_form").innerHTML = '<h2>Thanks ' + _("n").value +
+              ', you will be added to our mailer list for future updates on new products as they become available on the shop.</h2>';
+          } else {
+            _("status").innerHTML = ajax.responseText;
+            _("mybtn").disabled = false;
+          }
+        }
+      }
+      ajax.send(formdata);
+    }
+  </script>
 </head>
 
 <body id="top">
@@ -72,6 +99,33 @@
     <i class="fas fa-arrow-circle-up"></i>
   </a>
   <main class="content">
+    <section class="contact">
+      <h1 class="contact-heading">Join Our E-mail List</h1>
+      <p class="contact-text">Stay informed of new products as they come to the shop by adding yourself to our e-mail mailer list. We don't share
+        your email info or send spam...ONLY NEWS OF NEW PRODUCTS GOING INTO THE SHOP.
+        <br> Even better, you can remove yourself from the list at any time.</p>
+      <form id="my_form" onsubmit="submitForm(); return false;">
+        <div class="form-group">
+          <legend>Name:</legend>
+          <input type="text" id="n" class="form-control" name="name" placeholder="Enter name" required>
+          <br>
+          <legend>Email:</legend>
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="far fa-envelope"></i>
+            </span>
+            <p>
+              <input class="form-control" id="e" type="email" name="email" placeholder="Enter Email" required>
+            </p>
+          </div>
+          <br>
+          <p>
+            <input id="mybtn" type="submit" value="SUBMIT">
+            <span id="status"></span>
+          </p>
+        </div>
+      </form>
+    </section>
   </main>
   <footer>
     <p>&copy; 2018 | Like Us on Facebook!
