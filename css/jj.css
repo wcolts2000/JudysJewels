@@ -1087,10 +1087,17 @@ legend {
   padding-bottom: 60px;
 }
 
-@media screen and (max-width:) .about-us-text {
+.about-us-text {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   line-height: 1.5em;
+}
+
+@media screen and (min-width: 950px) {
+  .about-us-content {
+    max-width: 900px;
+    margin: 80px auto 120px auto;
+  }
 }
 
 @media screen and (max-width: 500px) {
