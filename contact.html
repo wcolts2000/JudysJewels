@@ -17,27 +17,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
-      // Add smooth scrolling to all links
       $("a").on('click', function (event) {
-
-        // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
-          // Prevent default anchor click behavior
           event.preventDefault();
-
-          // Store hash
           var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
           $('html, body').animate({
             scrollTop: $(hash).offset().top
           }, 800, function () {
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
           });
-        } // End if
+        }
       });
     });
   </script>
@@ -74,7 +63,20 @@
   <header class="header wow flipInX" id="myHeader">
     <nav class="navbar">
       <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
+      <div class="dropdown">
+        <button class="dropbtn">Shop
+          <i class="fas fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="shop.html">Show Room</a>
+          <a href="shop-necklaces.html">Necklaces</a>
+          <a href="shop-pendants.html">Pendants</a>
+          <a href="shop-bracelets.html">Bracelets</a>
+          <a href="shop-earrrings.html">Earrings</a>
+          <a href="shop-rings.html">Rings</a>
+          <a href="shop-sets.html">Sets</a>
+        </div>
+      </div>
       <img src="./img/JUDYS JEWELS LOGO.svg" alt="Mike and Judys Jewels Logo" class="logo">
       <a href="about_us.html">About Us</a>
       <a href="contact.html" class="active">Contact</a>
@@ -86,7 +88,21 @@
       </a>
       <div id="myLinks">
         <a href="index.html">Home</a>
-        <a href="shop.html">Shop Here</a>
+        <a href="shop.html">Shop</a>
+        <div class="shop-subcats">
+          <a href="shop-necklaces.html">Necklaces</a>
+          <hr class="style-two">
+          <a href="shop-pendants.html">Pendants</a>
+          <hr class="style-two">
+          <a href="shop-bracelets.html">Bracelets</a>
+          <hr class="style-two">
+          <a href="shop-earrrings.html">Earrings</a>
+          <hr class="style-two">
+          <a href="shop-rings.html">Rings</a>
+          <hr class="style-two">
+          <a href="shop-sets.html">Sets</a>
+          <hr>
+        </div>
         <a href="about_us.html">About Us</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -94,6 +110,7 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
+    <!-- /Top Navigation Mobile Menu -->
   </header>
   <a href="#top" id="up-arrow">
     <i class="fas fa-arrow-circle-up"></i>

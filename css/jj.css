@@ -27,7 +27,7 @@ body {
   z-index: 99;
   padding: 15px;
   font-size: 2em;
-  color: gold;
+  color: darkviolet;
 }
 
 #up-arrow:hover {
@@ -97,6 +97,12 @@ nav {
   transition: 500ms ease-in-out;
 }
 
+.navbar button {
+  background: none;
+  border: none;
+  font-family: 'Acme', sans-serif;
+}
+
 @media screen and (max-width: 750px) {
   .navbar {
     display: none;
@@ -107,6 +113,18 @@ nav {
   text-decoration: none;
   color: gold;
   padding: 0 20px;
+  font-size: inherit;
+}
+
+.navbar button {
+  text-decoration: none;
+  color: gold;
+  padding: 0 20px;
+  font-size: inherit;
+}
+
+.dropdown a {
+  float: left;
 }
 
 .navbar a::after {
@@ -124,6 +142,57 @@ nav {
 
 a.active::after {
   width: 100%;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  border-radius: 6px 6px 0 0;
+}
+
+.dropdown:hover .dropbtn {
+  background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
+}
+
+/* Dropdown content (hidden by default) */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
+  min-width: 160px;
+  border-radius: 0 6px 6px 6px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+  float: none;
+  color: gold;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: #00c4cc;
+}
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .logo {
@@ -674,7 +743,7 @@ footer i {
 
 .topnav a {
   color: gold;
-  padding: 14px 16px;
+  padding: 8px 16px;
   text-decoration: none;
   font-size: 1.5em;
   display: block;
@@ -682,6 +751,23 @@ footer i {
 
 .smLogo {
   height: 40px;
+}
+
+.shop-subcats {
+  padding: 0;
+  margin: 0 0 0 40px;
+}
+
+.shop-subcats a {
+  font-size: 1.25em;
+}
+
+.shop-subcats hr {
+  width: 80%;
+  margin: 0 auto;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(210, 223, 31, 0), rgba(210, 223, 31, 0.75), rgba(210, 223, 31, 0));
 }
 
 .topnav a.icon {
