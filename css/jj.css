@@ -991,7 +991,7 @@ legend {
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 10px 20px 60px 20px;
+  margin: 80px 30px 120px 30px;
   border-radius: 20px;
   color: #2c1f00;
   border: 5px solid #e4c47a;
@@ -1001,7 +1001,7 @@ legend {
   padding-bottom: 60px;
 }
 
-.about-us-text {
+@media screen and (max-width:) .about-us-text {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   line-height: 1.5em;
