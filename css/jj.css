@@ -1,7 +1,3 @@
-/* *********************************
-*********TODOS LIST**************
-********************************* */
-
 * {
   margin: 0;
   padding: 0;
@@ -166,7 +162,7 @@ a.active::after {
   display: none;
   position: absolute;
   background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
-  min-width: 160px;
+  min-width: 200px;
   border-radius: 0 6px 6px 6px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 9999;
@@ -199,6 +195,75 @@ a.active::after {
   margin-top: 7px;
 }
 
+/* ******************************** */
+
+/* **********mobile nav************ */
+
+/* ******************************** */
+
+/* Style the navigation menu */
+
+.topnav {
+  overflow: hidden;
+  background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+
+.topnav a {
+  color: gold;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 1.5em;
+  display: block;
+}
+
+.smLogo {
+  height: 40px;
+}
+
+.shop-subcats {
+  padding: 0;
+  margin: 0 0 0 40px;
+}
+
+.shop-subcats a {
+  font-size: 1.25em;
+}
+
+.shop-subcats hr {
+  width: 80%;
+  margin: 0 auto;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(210, 223, 31, 0), rgba(210, 223, 31, 0.75), rgba(210, 223, 31, 0));
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  font-size: 1.5em;
+}
+
+.topnav a:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 750px) {
+  .topnav {
+    display: none;
+  }
+}
+
 main {
   display: flex;
   margin: 50px 0 0 0;
@@ -214,6 +279,24 @@ main {
   box-shadow: none;
 }
 
+.shop-cta-btn {
+  transition: all .3s ease-in-out;
+}
+
+.shop-cta-btn:hover {
+  margin-top: 5px;
+  transform: scale(1.2)
+}
+
+.btn-scale {
+  transition: all .4s;
+  margin-bottom: 15px;
+}
+
+.btn-scale:hover {
+  transform: scale(1.2);
+}
+
 .btn {
   transition: all .4s;
 }
@@ -222,6 +305,7 @@ main {
   box-shadow: 0px 0px 0 3px #fff, 0 0 0 6px hsl(266, 78%, 64%), -7px 7px 7px rgba(0, 0, 0, 0.75);
   background: hsl(266, 78%, 64%);
   color: gold;
+  transform: scale(1.2);
 }
 
 .cta-image {
@@ -244,6 +328,24 @@ main {
   font-size: 1.5em;
 }
 
+@media screen and (min-width: 1524px) {
+  .rightHome h1 {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .rightHome h1 {
+    font-size: 6em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .rightHome h1 {
+    font-size: 4.75em;
+  }
+}
+
 @media screen and (max-width: 750px) {
   main {
     flex-direction: column;
@@ -258,6 +360,12 @@ main {
   .cta-image {
     margin-top: 50px;
     width: 70%;
+  }
+}
+
+@media screen and (max-width: 336px) {
+  .rightHome h1 {
+    font-size: 3.35em;
   }
 }
 
@@ -286,7 +394,7 @@ hr.style-two {
 }
 
 .cta-desc p span {
-  color: hsl(266, 78%, 64%);
+  color: #523a04;
   letter-spacing: .01em;
 }
 
@@ -479,26 +587,20 @@ footer i {
 
 .shop-cats {
   background-color: hsl(266, 78%, 64%);
-  width: 50%;
   margin: 45px auto;
-  border-radius: 7px;
-}
-
-@media screen and (max-width: 1200px) {
-  .shop-cats {
-    width: 80%;
-  }
+  font-size: 1.2em;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px hsl(266, 78%, 64%), 0 3px 15px -2px #8b6406;
 }
 
 @media screen and (max-width: 750px) {
   .shop-cats {
-    font-size: .8em;
+    font-size: 1.2em;
   }
 }
 
 .shop-cats a {
   display: inline-block;
-  margin: 20px 10px;
+  margin: 40px 10px;
   text-transform: uppercase;
   color: gold;
   text-decoration: none;
@@ -520,7 +622,7 @@ footer i {
 
 .showcase-body {
   position: relative;
-  margin: 0 auto 200px auto;
+  margin: 0 auto 30px auto;
   padding: 200px 0 200px 0;
   border-radius: 25px;
   width: 80%;
@@ -694,6 +796,90 @@ footer i {
   }
 }
 
+.shop-section {
+  max-width: 1000px;
+  margin: 10px auto;
+  background: #e4c47a;
+  border-radius: 15px;
+  margin-bottom: 60px;
+  background-image: url(/img/noise.png);
+  background-blend-mode: luminosity;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 7px #e4c47a, 0 0 15px -1px #523a04;
+}
+
+@media screen and (max-width: 700px) {
+  .shop-section {
+    width: 100vw;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 7px #e4c47a;
+    border-radius: 0;
+    padding: 30px 0;
+  }
+}
+
+.shop-card {
+  width: 80%;
+  max-height: 200px;
+  border: 10px double #8b6406;
+  margin: 20px auto;
+  overflow: hidden;
+  background: #e6e5e5;
+  border-radius: 0 35px 0 35px;
+  box-shadow: 0 3px 13px -5px #8b6406;
+}
+
+.shop-card--img {
+  float: left;
+  max-height: 198px;
+  border-right: 2px solid #523a04;
+  margin-right: 10px;
+}
+
+.shop-card--p {
+  font-size: .8em;
+  text-transform: uppercase;
+  padding: 30px 10px;
+}
+
+.shop-card a {
+  background: none;
+  border: 1px solid #00c4cc;
+  color: #523a04;
+  text-transform: uppercase;
+  font-size: .5em;
+  padding: 2px 12px;
+  box-shadow: 0 3px 3px -2px rgb(95, 125, 134);
+  transition: all .3s ease-in-out;
+}
+
+.shop-card a:hover {
+  background: #00c4cc;
+  border: 2px solid #fff;
+  color: #fff;
+  box-shadow: 0 4px 4px -3px #00c4cc;
+}
+
+@media screen and (max-width: 500px) {
+  .shop-card {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    overflow: visible;
+  }
+  .shop-card--img {
+    border: 2px solid #523a04;
+    border-top: 0;
+    min-height: 120px;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .shop-card--p {
+    display: inline-block;
+  }
+  .shop-card a {
+    font-size: .7em;
+  }
+}
+
 .fig-row {
   margin: 20px 20px;
   display: flex;
@@ -717,75 +903,6 @@ footer i {
 .shop-fig p {
   font-size: 2em;
   color: red;
-}
-
-/* ******************************** */
-
-/* **********mobile nav************ */
-
-/* ******************************** */
-
-/* Style the navigation menu */
-
-.topnav {
-  overflow: hidden;
-  background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
-  position: relative;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-
-.topnav #myLinks {
-  display: none;
-}
-
-/* Style navigation menu links */
-
-.topnav a {
-  color: gold;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-size: 1.5em;
-  display: block;
-}
-
-.smLogo {
-  height: 40px;
-}
-
-.shop-subcats {
-  padding: 0;
-  margin: 0 0 0 40px;
-}
-
-.shop-subcats a {
-  font-size: 1.25em;
-}
-
-.shop-subcats hr {
-  width: 80%;
-  margin: 0 auto;
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(210, 223, 31, 0), rgba(210, 223, 31, 0.75), rgba(210, 223, 31, 0));
-}
-
-.topnav a.icon {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 8px;
-  font-size: 1.5em;
-}
-
-.topnav a:hover {
-  color: #fff;
-}
-
-@media screen and (min-width: 750px) {
-  .topnav {
-    display: none;
-  }
 }
 
 /* 
@@ -960,6 +1077,143 @@ h1.about-us {
   padding: 30px;
 }
 
+.about-us-content {
+  background-image: linear-gradient(rgba(73, 209, 209, 0.74), rgba(189, 20, 152, 0.6)), url(/img/mountains-sceen.png);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 80px auto 60px auto;
+  border-radius: 20px;
+  color: #2c1f00;
+  border: 5px solid #e4c47a;
+  text-align: center;
+  box-shadow: 0px 0px 30px -5px rgb(4, 35, 117);
+  font-size: 1.2em;
+  padding-bottom: 60px;
+}
+
+.about-us-text {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 950px) {
+  .about-us-content {
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .about-us-content {
+    margin: 80px 30px 60px 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-us-content {
+    font-size: 1em;
+  }
+}
+
+.shop-btn {
+  padding: 3px 35px;
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  border-radius: 6px;
+  background: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  color: rgba(139, 13, 118, 0.89);
+  box-shadow: 0 0 0 3px rgba(139, 13, 118, 0.89), 0 0 0 6px white;
+  transition: all .4s ease-in-out;
+}
+
+.shop-btn:hover {
+  background: rgba(139, 13, 118, 0.89);
+  box-shadow: 0 0 0 3px white, 0 0 0 6px rgba(139, 13, 118, 0.89), 0 0 12px 6px rgba(0, 0, 0, 0.75);
+  color: white;
+  transform: scale(1.2);
+}
+
+.about-us--section {
+  /* display: flex; */
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.about-us--left {
+  background: #00c4cc;
+  padding: 30px;
+  float: left;
+}
+
+.about-us--left p {
+  max-width: 300px;
+  min-width: 250px;
+  color: #523a04;
+  border: 4px solid #523a04;
+  text-align: left;
+  box-shadow: 0 0 0 3px #00c4cc, 0 0 0 5px #523a04;
+}
+
+.about-us--right {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us--right img {
+  max-width: 350px;
+  margin: 0 20px 20px 20px;
+  border: 3px solid #523a04;
+  box-shadow: -2px 2px 15px -10px #002b2c;
+}
+
+@media screen and (max-width: 850px) {
+  .about-us--section {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-us--left {
+    margin-bottom: 50px
+  }
+  .about-us--left p {
+    max-width: 100%;
+  }
+  .about-us--right {
+    flex-direction: row;
+  }
+  .about-us--right img {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about-us--section {
+    margin: 0;
+    padding: 0;
+  }
+  .about-us--right {
+    flex-direction: column;
+  }
+  .about-us--right img {
+    max-width: 90%;
+    margin: 20px auto;
+  }
+  .about-us--left {
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+  .about-us--left p {
+    min-width: 180px;
+    margin: 0;
+    border: none;
+    font-size: .8em;
+    background: #00c4cc;
+  }
+}
+
 .contact-heading {
   font-family: 'Acme', sans-serif;
   font-size: 3em;
@@ -1072,57 +1326,28 @@ legend {
   }
 }
 
-.about-us-content {
-  background-image: linear-gradient(rgba(73, 209, 209, 0.74), rgba(189, 20, 152, 0.6)), url(/img/mountains-sceen.png);
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 80px 30px 120px 30px;
-  border-radius: 20px;
-  color: #2c1f00;
-  border: 5px solid #e4c47a;
-  text-align: center;
-  box-shadow: 0px 0px 30px -5px rgb(4, 35, 117);
-  font-size: 1.2em;
-  padding-bottom: 60px;
+.contact-info {
+  font-family: 'Acme', sans-serif;
+  list-style: none;
+  text-align: right;
+  margin-top: 60px;
+  font-size: 1em;
+  color: #fff;
+  background: linear-gradient(to left, #00c4cc, hsl(266, 78%, 64%));
+  padding: 30px 15px 15px 0;
+  border-bottom: 3px double #e4c47a;
 }
 
-.about-us-text {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  line-height: 1.5em;
+.contact-info :nth-child(3) {
+  margin-right: 40px;
 }
 
-@media screen and (min-width: 950px) {
-  .about-us-content {
-    max-width: 900px;
-    margin: 80px auto 120px auto;
-  }
+.contact-info li {
+  padding-bottom: 6px;
+  letter-spacing: .1em;
 }
 
-@media screen and (max-width: 500px) {
-  .about-us-content {
-    font-size: 1em;
-  }
-}
-
-.shop-btn {
-  padding: 3px 15px;
-  display: block;
-  width: 120px;
-  margin: 0 auto;
-  border-radius: 6px;
-  background: #fff;
-  text-decoration: none;
-  font-size: 2em;
-  color: rgba(139, 13, 118, 0.89);
-  box-shadow: 0 0 0 3px rgba(139, 13, 118, 0.89), 0 0 0 6px white;
-  transition: all .4s ease-in-out;
-}
-
-.shop-btn:hover {
-  background: rgba(139, 13, 118, 0.89);
-  box-shadow: 0 0 0 3px white, 0 0 0 6px rgba(139, 13, 118, 0.89), 0 0 12px 6px rgba(0, 0, 0, 0.75);
-  color: white;
-  transform: scale(1.2);
+.contact-info i {
+  margin-left: 20px;
+  color: #e4c47a;
 }
