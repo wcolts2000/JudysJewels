@@ -666,7 +666,6 @@ footer i {
 
 .p_slider .left,
 .p_slider .right {
-  cursor: pointer;
   position: absolute;
   z-index: 10;
 }
@@ -675,7 +674,7 @@ footer i {
   position: absolute;
   width: 200px;
   height: 200px;
-  cursor: pointer;
+  pointer-events: none;
   transition-duration: 1.5s;
   transition-property: transform, left, opacity, -webkit-filter;
 }
