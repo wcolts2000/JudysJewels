@@ -1,178 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="An Online Store of Handcrafted Bead and Gem Stone Jewelry"
+    />
+    <title>Mike & Judy's Jewels | Products</title>
+    <link rel="canonical" href="about_us.html" />
+    <link rel="stylesheet" href="./css/jj.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Acme|Alex+Brush"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $('a').on('click', function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== '') {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="An Online Store of Handcrafted Bead and Gem Stone Jewelry">
-  <title>Mike & Judy's Jewels | Products</title>
-  <link rel="canonical" href="about_us.html">
-  <link rel="stylesheet" href="./css/jj.css">
-  <link href="https://fonts.googleapis.com/css?family=Acme|Alex+Brush" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="icon" type="image/png" href="./img/favicon.png" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      // Add smooth scrolling to all links
-      $("a").on('click', function (event) {
+            // Store hash
+            var hash = this.hash;
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function () {
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
       });
-    });
-  </script>
-</head>
+    </script>
+  </head>
 
-<body id="top">
-  <header class="header" id="myHeader">
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <div class="dropdown">
-        <button class="dropbtn">Shop
-          <i class="fas fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="shop.html">Show Room</a>
-          <a href="shop-necklaces.html">Necklaces</a>
-          <a href="shop-pendants.html">Pendants</a>
-          <a href="shop-bracelets.html">Bracelets</a>
-          <a href="shop-earrrings.html">Earrings</a>
-          <a href="shop-rings.html">Rings</a>
-          <a href="shop-sets.html">Sets</a>
-          <a href="shop-fine-metals.html">Fine Metals</a>
-        </div>
-      </div>
-      <img src="./img/JUDYS JEWELS LOGO.svg" alt="Mike and Judys Jewels Logo" class="logo">
-      <a href="about_us.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <!-- Top Navigation Mobile Menu -->
-    <div class="topnav">
-      <a href="#home" class="active">
-        <img src="./img/JUDYS JEWELS LOGO.svg" alt="mike and judys jewels logo" class="smLogo">
-      </a>
-      <div id="myLinks">
+  <body id="top">
+    <header class="header" id="myHeader">
+      <nav class="navbar">
         <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <div class="shop-subcats">
-          <a href="shop-necklaces.html">Necklaces</a>
-          <hr>
-          <a href="shop-pendants.html">Pendants</a>
-          <hr>
-          <a href="shop-bracelets.html">Bracelets</a>
-          <hr>
-          <a href="shop-earrrings.html">Earrings</a>
-          <hr>
-          <a href="shop-rings.html">Rings</a>
-          <hr>
-          <a href="shop-sets.html">Sets</a>
-          <hr>
-          <a href="shop-fine-metals.html">Fine Metals</a>
-          <hr>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Shop
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="shop.html">Show Room</a>
+            <a href="shop-necklaces.html">Necklaces</a>
+            <a href="shop-pendants.html">Pendants</a>
+            <a href="shop-bracelets.html">Bracelets</a>
+            <a href="shop-earrrings.html">Earrings</a>
+            <a href="shop-rings.html">Rings</a>
+            <a href="shop-sets.html">Sets</a>
+            <a href="shop-fine-metals.html">Fine Metals</a>
+          </div>
         </div>
+        <img
+          src="./img/JUDYS JEWELS LOGO.svg"
+          alt="Mike and Judys Jewels Logo"
+          class="logo"
+        />
         <a href="about_us.html">About Us</a>
         <a href="contact.html">Contact</a>
+      </nav>
+      <!-- Top Navigation Mobile Menu -->
+      <div class="topnav">
+        <a href="#home" class="active">
+          <img
+            src="./img/JUDYS JEWELS LOGO.svg"
+            alt="mike and judys jewels logo"
+            class="smLogo"
+          />
+        </a>
+        <div id="myLinks">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <div class="shop-subcats">
+            <a href="shop-necklaces.html">Necklaces</a>
+            <hr />
+            <a href="shop-pendants.html">Pendants</a>
+            <hr />
+            <a href="shop-bracelets.html">Bracelets</a>
+            <hr />
+            <a href="shop-earrrings.html">Earrings</a>
+            <hr />
+            <a href="shop-rings.html">Rings</a>
+            <hr />
+            <a href="shop-sets.html">Sets</a>
+            <hr />
+            <a href="shop-fine-metals.html">Fine Metals</a>
+            <hr />
+          </div>
+          <a href="about_us.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a
+          href="javascript:void(0);"
+          class="icon"
+          onclick="hamburgerMenuToggle()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
-      <a href="javascript:void(0);" class="icon" onclick="hamburgerMenuToggle()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    <!-- /Top Navigation Mobile Menu -->
-  </header>
-  <a href="#top" id="up-arrow">
-    <i class="fas fa-arrow-circle-up"></i>
-  </a>
-  <main class="content">
-    <div class="product-wrapper">
-      <div class="product-card">
-        <h1>PRODUCT NAME</h1>
-        <div class="primary" style="background-image: url(./img/lace-necklace-and-earrings.png);"></div>
+      <!-- /Top Navigation Mobile Menu -->
+    </header>
+    <a href="#top" id="up-arrow">
+      <i class="fas fa-arrow-circle-up"></i>
+    </a>
+    <main class="content">
+      <div class="product-wrapper">
+        <div class="product-card">
+          <h1>PRODUCT NAME</h1>
+          <div
+            class="primary"
+            style="background-image: url(./img/lace-necklace-and-earrings.png);"
+          ></div>
 
-        <div class="product-thumbs ">
-          <a href="#" class="selected thumbnail" data-big="./img/lace-necklace-and-earrings.png">
-            <div class="thumbnail-image" style="background-image: url(./img/lace-necklace-and-earrings.png)"></div>
-          </a>
-          <a href="#" class="thumbnail" data-big="./img/dragonfly-necklace.png">
-            <div class="thumbnail-image" style="background-image: url(./img/dragonfly-necklace.png)"></div>
-          </a>
-          <a href="#" class="thumbnail" data-big="./img/bead-bracelet.png">
-            <div class="thumbnail-image" style="background-image: url(./img/bead-bracelet.png)"></div>
-          </a>
-          <a href="#" class="thumbnail" data-big="./img/necklace.png">
-            <div class="thumbnail-image" style="background-image: url(./img/necklace.png)"></div>
-          </a>
-          <a href="#" class="thumbnail" data-big="./img/pink-cystal-pendant.png">
-            <div class="thumbnail-image" style="background-image: url(./img/pink-cystal-pendant.png)"></div>
-          </a>
+          <div class="product-thumbs ">
+            <a
+              href="#"
+              class="selected thumbnail"
+              data-big="./img/lace-necklace-and-earrings.png"
+            >
+              <div
+                class="thumbnail-image"
+                style="background-image: url(./img/lace-necklace-and-earrings.png)"
+              ></div>
+            </a>
+            <a
+              href="#"
+              class="thumbnail"
+              data-big="./img/dragonfly-necklace.png"
+            >
+              <div
+                class="thumbnail-image"
+                style="background-image: url(./img/dragonfly-necklace.png)"
+              ></div>
+            </a>
+            <a href="#" class="thumbnail" data-big="./img/bead-bracelet.png">
+              <div
+                class="thumbnail-image"
+                style="background-image: url(./img/bead-bracelet.png)"
+              ></div>
+            </a>
+            <a href="#" class="thumbnail" data-big="./img/necklace.png">
+              <div
+                class="thumbnail-image"
+                style="background-image: url(./img/necklace.png)"
+              ></div>
+            </a>
+            <a
+              href="#"
+              class="thumbnail"
+              data-big="./img/pink-crystal-pendant.png"
+            >
+              <div
+                class="thumbnail-image"
+                style="background-image: url(./img/pink-crystal-pendant.png)"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="product-desc ">
+          <h2>Product Name Again</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+            excepturi porro sed ipsa iste corporis molestiae dolore sint fugit.
+            Rerum perspiciatis fugit ex ratione odit deleniti voluptas iste
+            quisquam reiciendis molestias nulla placeat suscipit consequatur eum
+            quidem enim eaque, tempora numquam! Adipisci saepe vero repellendus,
+            similique architecto nihil facere cumque!
+          </p>
+          <img src="./img/cart_btn.png " alt="add to cart button " />
         </div>
       </div>
-      <div class="product-desc ">
-        <h2>Product Name Again</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor excepturi porro sed ipsa iste corporis molestiae
-          dolore sint fugit. Rerum perspiciatis fugit ex ratione odit deleniti voluptas iste quisquam reiciendis molestias
-          nulla placeat suscipit consequatur eum quidem enim eaque, tempora numquam! Adipisci saepe vero repellendus, similique
-          architecto nihil facere cumque!
-        </p>
-        <img src="./img/cart_btn.png " alt="add to cart button ">
-
-
+    </main>
+    <section class="suggested-items-sect ">
+      <h2>Customers who bought this also like these...</h2>
+      <hr class="style-two " />
+      <div class="suggested-items ">
+        <a href="# ">
+          <img src="./img/bead-bracelet.png " alt="a beaded bracelet " />
+        </a>
+        <a href="# ">
+          <img
+            src="./img/dragonfly-necklace.png "
+            alt="a dragonfly necklace "
+          />
+        </a>
+        <a href="# ">
+          <img
+            src="./img/lace-necklace-and-earrings.png "
+            alt="a beaded lace style necklace with matching earrings "
+          />
+        </a>
+        <a href="# ">
+          <img
+            src="./img/necklace.png "
+            alt="i beautiful beaded rope necklace "
+          />
+        </a>
+        <a href="# ">
+          <img
+            src="./img/pink-crystal-pendant.png "
+            alt="a pink schwarskovski crystal necklace "
+          />
+        </a>
       </div>
-    </div>
-  </main>
-  <section class="suggested-items-sect ">
-    <h2>Customers who bought this also like these...</h2>
-    <hr class="style-two ">
-    <div class="suggested-items ">
-
-      <a href="# ">
-        <img src="./img/bead-bracelet.png " alt="a beaded bracelet ">
-      </a>
-      <a href="# ">
-        <img src="./img/dragonfly-necklace.png " alt="a dragonfly necklace ">
-      </a>
-      <a href="# ">
-        <img src="./img/lace-necklace-and-earrings.png " alt="a beaded lace style necklace with matching earrings ">
-      </a>
-      <a href="# ">
-        <img src="./img/necklace.png " alt="i beautiful beaded rope necklace ">
-      </a>
-      <a href="# ">
-        <img src="./img/pink-cystal-pendant.png " alt="a pink schwarskovski crystal necklace ">
-      </a>
-    </div>
-  </section>
-  <footer>
-    <p>&copy; 2018 | Like Us on Facebook!
-      <a href="https://www.facebook.com/profile.php?id=100008990355830 " rel="noopener " target="_blank ">
-        <i class="fab fa-facebook-square "></i>
-      </a>
-    </p>
-  </footer>
-  <script src="./js/jj.js "></script>
-  <script src="js/wow.min.js "></script>
-  <script>
-    new WOW().init();
-  </script>
-</body>
-
+    </section>
+    <footer>
+      <p>
+        &copy; 2018 | Like Us on Facebook!
+        <a
+          href="https://www.facebook.com/profile.php?id=100008990355830 "
+          rel="noopener "
+          target="_blank "
+        >
+          <i class="fab fa-facebook-square "></i>
+        </a>
+      </p>
+    </footer>
+    <script src="./js/jj.js "></script>
+    <script src="js/wow.min.js "></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
 </html>

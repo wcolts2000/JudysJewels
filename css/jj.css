@@ -68,7 +68,7 @@ a {
   width: 100%;
 }
 
-.sticky+.content {
+.sticky + .content {
   padding-top: 260px;
 }
 
@@ -130,7 +130,7 @@ nav {
   width: 0;
   height: 4px;
   background: gold;
-  transition: width .4s;
+  transition: width 0.4s;
 }
 
 .navbar a:hover::after {
@@ -181,7 +181,7 @@ a.active::after {
   text-decoration: none;
   display: block;
   text-align: left;
-  transition: all 0.6s ease-in-out; 
+  transition: all 0.6s ease-in-out;
 }
 
 /* Add a grey background color to dropdown links on hover */
@@ -250,7 +250,12 @@ a.active::after {
   margin: 0 auto;
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(210, 223, 31, 0), rgba(210, 223, 31, 0.75), rgba(210, 223, 31, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(210, 223, 31, 0),
+    rgba(210, 223, 31, 0.75),
+    rgba(210, 223, 31, 0)
+  );
 }
 
 .topnav a.icon {
@@ -287,16 +292,16 @@ main {
 }
 
 .shop-cta-btn {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .shop-cta-btn:hover {
   margin-top: 5px;
-  transform: scale(1.2)
+  transform: scale(1.2);
 }
 
 .btn-scale {
-  transition: all .4s;
+  transition: all 0.4s;
   margin-bottom: 15px;
   display: inline-block;
 }
@@ -306,11 +311,12 @@ main {
 }
 
 .btn {
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .btn:hover {
-  box-shadow: 0px 0px 0 3px #fff, 0 0 0 6px hsl(266, 78%, 64%), -7px 7px 7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 0 3px #fff, 0 0 0 6px hsl(266, 78%, 64%),
+    -7px 7px 7px rgba(0, 0, 0, 0.75);
   background: hsl(266, 78%, 64%);
   color: gold;
   transform: scale(1.2);
@@ -380,7 +386,12 @@ main {
 hr.style-two {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 .cta-desc {
@@ -399,12 +410,12 @@ hr.style-two {
 
 .cta-desc p {
   font-size: 1.25em;
-  letter-spacing: .125em;
+  letter-spacing: 0.125em;
 }
 
 .cta-desc p span {
   color: #523a04;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
 }
 
 .cta-desc a {
@@ -413,7 +424,7 @@ hr.style-two {
   text-transform: uppercase;
   letter-spacing: normal;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.541);
-  transition: all .8s;
+  transition: all 0.8s;
 }
 
 .cta-desc a:hover {
@@ -444,7 +455,7 @@ section a {
   text-decoration: none;
   font-family: 'Acme', sans-serif;
   color: #fff;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   padding: 8px 50px;
   background: #00c4cc;
   border-radius: 10px;
@@ -492,7 +503,7 @@ figure a {
 }
 
 figcaption {
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 @media screen and (max-width: 750px) {
@@ -524,11 +535,12 @@ figcaption {
 .shop-cta {
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: .25em;
+  letter-spacing: 0.25em;
   margin: 100px auto;
   width: 80%;
   padding: 80px;
-  background-image: linear-gradient(rgba(2, 67, 71, 0.5), rgba(9, 22, 92, 0.5)), url(../img/shopping-annex.jpeg);
+  background-image: linear-gradient(rgba(2, 67, 71, 0.5), rgba(9, 22, 92, 0.5)),
+    url(../img/shopping-annex.jpeg);
   background-position: center;
 }
 
@@ -548,7 +560,7 @@ figcaption {
     padding: 30px 0;
   }
   .shop-cta a.btn {
-    font-size: .75em;
+    font-size: 0.75em;
     padding: 8px 22px;
   }
 }
@@ -606,7 +618,8 @@ footer i {
   background-color: hsl(266, 78%, 64%);
   margin: 45px auto;
   font-size: 1.2em;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 6px hsl(266, 78%, 64%), 0 3px 15px -2px #8b6406;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px hsl(266, 78%, 64%),
+    0 3px 15px -2px #8b6406;
 }
 
 @media screen and (max-width: 750px) {
@@ -684,8 +697,8 @@ footer i {
   -webkit-transform: scale(0);
   transform: scale(0);
   position: relative;
-  -webkit-animation: scale_bounce 1.2s .4s forwards;
-  animation: scale_bounce 1.2s .4s forwards;
+  -webkit-animation: scale_bounce 1.2s 0.4s forwards;
+  animation: scale_bounce 1.2s 0.4s forwards;
   -webkit-box-reflect: below 4px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.2)));
 }
 
@@ -732,7 +745,7 @@ footer i {
 .controls .left img {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-  transition: all .4s;
+  transition: all 0.4s;
   opacity: 0.2;
 }
 
@@ -749,7 +762,7 @@ footer i {
 }
 
 .controls .right img {
-  transition: all .4s;
+  transition: all 0.4s;
   opacity: 0.2;
 }
 
@@ -851,7 +864,7 @@ footer i {
 }
 
 .shop-card--p {
-  font-size: .8em;
+  font-size: 0.8em;
   text-transform: uppercase;
   padding: 30px 10px;
 }
@@ -861,10 +874,10 @@ footer i {
   border: 1px solid #00c4cc;
   color: #523a04;
   text-transform: uppercase;
-  font-size: .5em;
+  font-size: 0.5em;
   padding: 2px 12px;
   box-shadow: 0 3px 3px -2px rgb(95, 125, 134);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .shop-card a:hover {
@@ -892,7 +905,7 @@ footer i {
     display: inline-block;
   }
   .shop-card a {
-    font-size: .7em;
+    font-size: 0.7em;
   }
 }
 
@@ -1015,7 +1028,7 @@ footer i {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .primary:hover {
@@ -1066,7 +1079,7 @@ footer i {
 
 .suggested-items-sect h2 {
   font-family: 'Acme', sans-serif;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 .suggested-items img {
@@ -1086,7 +1099,11 @@ h1.about-us {
   margin: 30px;
   font-size: 3em;
   color: #fff;
-  text-shadow: -1px 1px 0 #ddd, -2px 2px 0 #c8c8c8, -3px 3px 0 #ccc, -4px 4px 0 #b8b8b8, -4px 4px 0 #bbb, 0px 1px 1px rgba(0, 0, 0, .4), 0px 2px 2px rgba(0, 0, 0, .3), -1px 3px 3px rgba(0, 0, 0, .2), -1px 5px 5px rgba(0, 0, 0, .1), -2px 8px 8px rgba(0, 0, 0, .1), -2px 13px 13px rgba(0, 0, 0, .1);
+  text-shadow: -1px 1px 0 #ddd, -2px 2px 0 #c8c8c8, -3px 3px 0 #ccc,
+    -4px 4px 0 #b8b8b8, -4px 4px 0 #bbb, 0px 1px 1px rgba(0, 0, 0, 0.4),
+    0px 2px 2px rgba(0, 0, 0, 0.3), -1px 3px 3px rgba(0, 0, 0, 0.2),
+    -1px 5px 5px rgba(0, 0, 0, 0.1), -2px 8px 8px rgba(0, 0, 0, 0.1),
+    -2px 13px 13px rgba(0, 0, 0, 0.1);
 }
 
 .about-us-text {
@@ -1101,7 +1118,11 @@ h1.about-us {
 }
 
 .about-us-content {
-  background-image: linear-gradient(rgba(73, 209, 209, 0.74), rgba(189, 20, 152, 0.6)), url(/img/mountains-sceen.png);
+  background-image: linear-gradient(
+      rgba(73, 209, 209, 0.74),
+      rgba(189, 20, 152, 0.6)
+    ),
+    url(/img/mountains-sceen.png);
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1130,7 +1151,11 @@ h1.about-us {
 
 .mats-head {
   font-size: 2em;
-  text-shadow: -1px 1px 0 #ddd, -2px 2px 0 #c8c8c8, -3px 3px 0 #ccc, -4px 4px 0 #b8b8b8, -4px 4px 0 #bbb, 0px 1px 1px rgba(0, 0, 0, .4), 0px 2px 2px rgba(0, 0, 0, .3), -1px 3px 3px rgba(0, 0, 0, .2), -1px 5px 5px rgba(0, 0, 0, .1), -2px 8px 8px rgba(0, 0, 0, .1), -2px 13px 13px rgba(0, 0, 0, .1);
+  text-shadow: -1px 1px 0 #ddd, -2px 2px 0 #c8c8c8, -3px 3px 0 #ccc,
+    -4px 4px 0 #b8b8b8, -4px 4px 0 #bbb, 0px 1px 1px rgba(0, 0, 0, 0.4),
+    0px 2px 2px rgba(0, 0, 0, 0.3), -1px 3px 3px rgba(0, 0, 0, 0.2),
+    -1px 5px 5px rgba(0, 0, 0, 0.1), -2px 8px 8px rgba(0, 0, 0, 0.1),
+    -2px 13px 13px rgba(0, 0, 0, 0.1);
 }
 
 .mats-desc p {
@@ -1146,9 +1171,9 @@ h1.about-us {
   padding: 0;
   letter-spacing: 0;
   text-decoration: underline;
-  font-size: .8em;
+  font-size: 0.8em;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.541);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .mats-desc p a:hover {
@@ -1188,12 +1213,13 @@ h1.about-us {
   font-size: 2em;
   color: rgba(139, 13, 118, 0.89);
   box-shadow: 0 0 0 3px rgba(139, 13, 118, 0.89), 0 0 0 6px white;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .shop-btn:hover {
   background: rgba(139, 13, 118, 0.89);
-  box-shadow: 0 0 0 3px white, 0 0 0 6px rgba(139, 13, 118, 0.89), 0 0 12px 6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 0 3px white, 0 0 0 6px rgba(139, 13, 118, 0.89),
+    0 0 12px 6px rgba(0, 0, 0, 0.75);
   color: white;
   transform: scale(1.2);
 }
@@ -1237,7 +1263,7 @@ h1.about-us {
     flex-direction: column;
   }
   .about-us--left {
-    margin-bottom: 50px
+    margin-bottom: 50px;
   }
   .about-us--left p {
     max-width: 100%;
@@ -1270,9 +1296,16 @@ h1.about-us {
     min-width: 180px;
     margin: 0;
     border: none;
-    font-size: .8em;
+    font-size: 0.8em;
     background: #00c4cc;
   }
+}
+
+p.lead {
+  text-transform: uppercase;
+  font-size: 1.6em;
+  margin: 0 auto 24px auto;
+  box-shadow: 0 0 0 5px #523a04;
 }
 
 .contact-heading {
@@ -1289,7 +1322,7 @@ h1.about-us {
     font-size: 1.5em;
   }
   .contact-text {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 }
 
@@ -1304,7 +1337,8 @@ h1.about-us {
   background: #00c4cc;
   padding: 50px;
   border-radius: 15px;
-  box-shadow: 0 0 0 4px white, 0 0 0 8px #00c4cc, 0 0 15px 8px rgba(7, 101, 138, 0.5);
+  box-shadow: 0 0 0 4px white, 0 0 0 8px #00c4cc,
+    0 0 15px 8px rgba(7, 101, 138, 0.5);
 }
 
 @media screen and (max-width: 500px) {
@@ -1330,7 +1364,7 @@ legend {
   background-color: #e4c47a;
   height: 20px;
   padding: 5px 10px 12px 10px;
-  font-size: .85em;
+  font-size: 0.85em;
   border-radius: 7px;
   cursor: default;
 }
@@ -1342,15 +1376,17 @@ legend {
   color: #e4c47a;
   border-radius: 7px;
   font-family: 'Acme', sans-serif;
-  font-size: .75em;
-  box-shadow: 0 0 0 3px #00c4cc, 0 0 0 6px hsl(266, 78%, 64%), 0 0 12px 5px rgba(0, 0, 0, 0.3);
-  transition: all .5s ease-in-out;
+  font-size: 0.75em;
+  box-shadow: 0 0 0 3px #00c4cc, 0 0 0 6px hsl(266, 78%, 64%),
+    0 0 12px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 
 #mybtn:hover {
   background: #fff;
-  box-shadow: 0 0 0 3px #00c4cc, 0 0 0 5px white, 0 0 12px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 3px #00c4cc, 0 0 0 5px white,
+    0 0 12px 5px rgba(0, 0, 0, 0.5);
   color: hsl(266, 78%, 64%);
   transform: scale(1.1);
 }
@@ -1358,7 +1394,7 @@ legend {
 #n,
 #e {
   margin: 30px;
-  font-size: .75em;
+  font-size: 0.75em;
   border-radius: 8px;
   padding: 7px 15px;
   box-shadow: 0 0 0 3px #00c4cc, 0 0 0 5px white;
@@ -1377,12 +1413,12 @@ legend {
   }
   legend {
     display: block;
-    font-size: .7em;
+    font-size: 0.7em;
     padding: 5px 12px;
   }
   #n,
   #e {
-    font-size: .5em;
+    font-size: 0.5em;
     box-shadow: none;
   }
 }
@@ -1405,18 +1441,11 @@ legend {
 
 .contact-info li {
   padding-bottom: 6px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .contact-info i {
   margin-left: 20px;
   color: #e4c47a;
-}
-
-p.lead {
-  text-transform: uppercase;
-  font-size: 1.6em;
-  margin: 0 auto 24px auto;
-  box-shadow: 0 0 0 5px #523a04;
 }

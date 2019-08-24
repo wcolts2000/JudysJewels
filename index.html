@@ -1,181 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="An Online Store of Handcrafted Bead and Gem Stone Jewelry"
+    />
+    <title>Mike & Judy's Jewels | Handcrafted Jewelry</title>
+    <link rel="canonical" href="index.html" />
+    <link rel="stylesheet" href="./css/jj.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Acme|Alex+Brush"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $('a').on('click', function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== '') {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="An Online Store of Handcrafted Bead and Gem Stone Jewelry">
-  <title>Mike & Judy's Jewels | Handcrafted Jewelry</title>
-  <link rel="canonical" href="index.html">
-  <link rel="stylesheet" href="./css/jj.css">
-  <link href="https://fonts.googleapis.com/css?family=Acme|Alex+Brush" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="icon" type="image/png" href="./img/favicon.png" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      // Add smooth scrolling to all links
-      $("a").on('click', function (event) {
+            // Store hash
+            var hash = this.hash;
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function () {
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
       });
-    });
-  </script>
-</head>
+    </script>
+  </head>
 
-<body id="top">
-  <header class="header wow flipInX" id="myHeader">
-    <nav class="navbar">
-      <a href="index.html" class="active">Home</a>
-      <div class="dropdown">
-        <button class="dropbtn">Shop
-          <i class="fas fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="shop.html">Show Room</a>
-          <a href="shop-necklaces.html">Necklaces</a>
-          <a href="shop-pendants.html">Pendants</a>
-          <a href="shop-bracelets.html">Bracelets</a>
-          <a href="shop-earrrings.html">Earrings</a>
-          <a href="shop-rings.html">Rings</a>
-          <a href="shop-sets.html">Sets</a>
-          <a href="shop-fine-metals.html">Fine Metals</a>
+  <body id="top">
+    <header class="header wow flipInX" id="myHeader">
+      <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Shop
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="shop.html">Show Room</a>
+            <a href="shop-necklaces.html">Necklaces</a>
+            <a href="shop-pendants.html">Pendants</a>
+            <a href="shop-bracelets.html">Bracelets</a>
+            <a href="shop-earrrings.html">Earrings</a>
+            <a href="shop-rings.html">Rings</a>
+            <a href="shop-sets.html">Sets</a>
+            <a href="shop-fine-metals.html">Fine Metals</a>
+          </div>
         </div>
-      </div>
-      <img src="./img/JUDYS JEWELS LOGO.svg" alt="Mike and Judys Jewels Logo" class="logo">
-      <a href="about_us.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <!-- Top Navigation Mobile Menu -->
-    <div class="topnav">
-      <a href="#home" class="active">
-        <img src="./img/JUDYS JEWELS LOGO.svg" alt="mike and judys jewels logo" class="smLogo">
-      </a>
-      <div id="myLinks">
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <div class="shop-subcats">
-          <a href="shop-necklaces.html">Necklaces</a>
-          <hr>
-          <a href="shop-pendants.html">Pendants</a>
-          <hr>
-          <a href="shop-bracelets.html">Bracelets</a>
-          <hr>
-          <a href="shop-earrrings.html">Earrings</a>
-          <hr>
-          <a href="shop-rings.html">Rings</a>
-          <hr>
-          <a href="shop-sets.html">Sets</a>
-          <hr>
-          <a href="shop-fine-metals.html">Fine Metals</a>
-          <hr>
-        </div>
+        <img
+          src="./img/JUDYS JEWELS LOGO.svg"
+          alt="Mike and Judys Jewels Logo"
+          class="logo"
+        />
         <a href="about_us.html">About Us</a>
         <a href="contact.html">Contact</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="hamburgerMenuToggle()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    <!-- /Top Navigation Mobile Menu -->
-  </header>
-  <a href="#top" id="up-arrow">
-    <i class="fas fa-arrow-circle-up"></i>
-  </a>
-  <main class="content" id="home">
-    <img src="./img/bead-bracelet.png" alt="bead bracelet" class="cta-image wow bounceInLeft" data-wow-delay=".25s">
-    <div class="rightHome">
-      <h1 class="wow bounceInRight" data-wow-delay=".5s">Handcrafted Jewelry</h1>
-      <div class="wow flipInY" data-wow-delay="1s">
-        <a href="shop.html" class="btn" id="btn-test">Enter Shop</a>
-      </div>
-    </div>
-
-  </main>
-  <div class="cta-desc bottom">
-    <h2>Every Piece is Hand-Made in the USA</h2>
-    <p>At Mike &amp; Judy's Jewels, all of the pieces are individually hand-crafted with love and care. Join our mailer to keep
-      up-to-date on
-      <span>NEW PRODUCTS</span> and
-      <span>SALES</span> by visiting our
-      <a href="contact.html">Contact</a> page.</p>
-  </div>
-  <section>
-    <hr class="style-two">
-    <h2 class="wow zoomIn">A Few of Our Beautiful Pieces</h2>
-    <hr class="style-two">
-    <div class="figs">
-      <figure class="wow bounceInLeft">
-        <img src="./img/dragonfly-necklace.png" alt="a beaded dragonfly necklace" class="promo-sm" />
-        <figcaption>
-          <h3>Dragonfly Necklace</h3>
-          <p>A Beautiful Beaded Chain with Dragonfly Pendant.</p>
-          <div class="shop-cta-btn">
-            <a href="shop.html" class="btn">Buy Now</a>
+      </nav>
+      <!-- Top Navigation Mobile Menu -->
+      <div class="topnav">
+        <a href="#home" class="active">
+          <img
+            src="./img/JUDYS JEWELS LOGO.svg"
+            alt="mike and judys jewels logo"
+            class="smLogo"
+          />
+        </a>
+        <div id="myLinks">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <div class="shop-subcats">
+            <a href="shop-necklaces.html">Necklaces</a>
+            <hr />
+            <a href="shop-pendants.html">Pendants</a>
+            <hr />
+            <a href="shop-bracelets.html">Bracelets</a>
+            <hr />
+            <a href="shop-earrrings.html">Earrings</a>
+            <hr />
+            <a href="shop-rings.html">Rings</a>
+            <hr />
+            <a href="shop-sets.html">Sets</a>
+            <hr />
+            <a href="shop-fine-metals.html">Fine Metals</a>
+            <hr />
           </div>
-        </figcaption>
-      </figure>
-      <figure class="wow zoomIn">
-        <img src="./img/pink-cystal-pendant.png" alt="a pionk bead chain with a crystal pendant" class="promo-lg" />
-        <figcaption>
-          <h3>Pink Teardrop</h3>
-          <p>A Pink Beaded Chain with a Teardrop Crystal Pendant.</p>
-          <div class="shop-cta-btn">
-            <a href="shop.html" class="btn">Buy Now</a>
-          </div>
-        </figcaption>
-      </figure>
-      <figure class="wow bounceInRight">
-        <img src="./img/lace-necklace-and-earrings.png" alt="a beaded lace-pattern necklace and earrings" class="promo-sm" />
-        <figcaption>
-          <h3>Lace Necklace and Earrings</h3>
-          <p>A Beaded Lace Necklace with Matching Earrings.</p>
-          <div class="shop-cta-btn">
-            <a href="shop.html" class="btn">Buy Now</a>
-          </div>
-        </figcaption>
-      </figure>
-    </div>
-    <hr class="style-two">
-    <div class="shop-cta">
-      <p>See All of Our Pieces in the</p>
-      <div class="wow flip" data-wow-iteration="2">
-        <a href="shop.html" class="btn">SHOP</a>
+          <a href="about_us.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a
+          href="javascript:void(0);"
+          class="icon"
+          onclick="hamburgerMenuToggle()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
+      <!-- /Top Navigation Mobile Menu -->
+    </header>
+    <a href="#top" id="up-arrow">
+      <i class="fas fa-arrow-circle-up"></i>
+    </a>
+    <main class="content" id="home">
+      <img
+        src="./img/bead-bracelet.png"
+        alt="bead bracelet"
+        class="cta-image wow bounceInLeft"
+        data-wow-delay=".25s"
+      />
+      <div class="rightHome">
+        <h1 class="wow bounceInRight" data-wow-delay=".5s">
+          Handcrafted Jewelry
+        </h1>
+        <div class="wow flipInY" data-wow-delay="1s">
+          <a href="shop.html" class="btn" id="btn-test">Enter Shop</a>
+        </div>
+      </div>
+    </main>
+    <div class="cta-desc bottom">
+      <h2>Every Piece is Hand-Made in the USA</h2>
+      <p>
+        At Mike &amp; Judy's Jewels, all of the pieces are individually
+        hand-crafted with love and care. Join our mailer to keep up-to-date on
+        <span>NEW PRODUCTS</span> and <span>SALES</span> by visiting our
+        <a href="contact.html">Contact</a> page.
+      </p>
     </div>
-  </section>
-  <footer>
-    <p>&copy; 2018 | Like Us on Facebook!
-      <a href="https://www.facebook.com/profile.php?id=100008990355830" rel="noopener" target="_blank">
-        <i class="fab fa-facebook-square"></i>
-      </a>
-    </p>
-  </footer>
-  <script src="./js/jj.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
-</body>
-
+    <section>
+      <hr class="style-two" />
+      <h2 class="wow zoomIn">A Few of Our Beautiful Pieces</h2>
+      <hr class="style-two" />
+      <div class="figs">
+        <figure class="wow bounceInLeft">
+          <img
+            src="./img/dragonfly-necklace.png"
+            alt="a beaded dragonfly necklace"
+            class="promo-sm"
+          />
+          <figcaption>
+            <h3>Dragonfly Necklace</h3>
+            <p>A Beautiful Beaded Chain with Dragonfly Pendant.</p>
+            <div class="shop-cta-btn">
+              <a href="shop.html" class="btn">Buy Now</a>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="wow zoomIn">
+          <img
+            src="./img/pink-crystal-pendant.png"
+            alt="a pionk bead chain with a crystal pendant"
+            class="promo-lg"
+          />
+          <figcaption>
+            <h3>Pink Teardrop</h3>
+            <p>A Pink Beaded Chain with a Teardrop Crystal Pendant.</p>
+            <div class="shop-cta-btn">
+              <a href="shop.html" class="btn">Buy Now</a>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="wow bounceInRight">
+          <img
+            src="./img/lace-necklace-and-earrings.png"
+            alt="a beaded lace-pattern necklace and earrings"
+            class="promo-sm"
+          />
+          <figcaption>
+            <h3>Lace Necklace and Earrings</h3>
+            <p>A Beaded Lace Necklace with Matching Earrings.</p>
+            <div class="shop-cta-btn">
+              <a href="shop.html" class="btn">Buy Now</a>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+      <hr class="style-two" />
+      <div class="shop-cta">
+        <p>See All of Our Pieces in the</p>
+        <div class="wow flip" data-wow-iteration="2">
+          <a href="shop.html" class="btn">SHOP</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>
+        &copy; 2018 | Like Us on Facebook!
+        <a
+          href="https://www.facebook.com/profile.php?id=100008990355830"
+          rel="noopener"
+          target="_blank"
+        >
+          <i class="fab fa-facebook-square"></i>
+        </a>
+      </p>
+    </footer>
+    <script src="./js/jj.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
 </html>
